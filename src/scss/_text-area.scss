@@ -1,0 +1,61 @@
+@import "ember-text-field/src/scss/text-field";
+
+@mixin text-area {
+    .text-area.grow .mirror,
+    .text-area textarea {
+        @include text-input-style;
+    }
+
+    .text-area.small.grow .mirror,
+    .text-area.small textarea {
+        padding: $small-field-padding-top $small-field-padding-right $small-field-padding-bottom $small-field-padding-left;
+        font-size: $small-field-font-size;
+    }
+    
+    .text-area {
+        position: relative;
+        display: inline-block;
+    
+        textarea {
+            width: 100%;
+            display: block;
+            resize: none;
+        }
+    
+        &.grow {
+            textarea {
+                z-index: 2;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                height: 100%;
+            }
+            .mirror {
+                z-index: 1;
+                position: relative;
+                @include opacity(0);
+                display: block;
+                white-space: pre-wrap;
+            }
+        }
+
+        &.required:not(.disabled):not(.has-value):not(.has-error) {
+            textarea:not(:focus) {
+                background-color: $background-gray;
+            }
+        }
+
+        &.has-error {
+            textarea {
+                background-color: $yellow-xlight;
+                border-color: $yellow-light;
+            }
+        }
+
+        &.has-error-highlight {
+            textarea {
+                border-color: $red;
+            }
+        }
+    }
+}
