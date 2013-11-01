@@ -6,7 +6,6 @@
   "billy-builder": {
     "include": [
       "src/js",
-      "src/locales",
       "src/templates"
     ]
   },
