@@ -3,7 +3,7 @@ var i18n = require('i18n');
 module.exports = Em.Component.extend(require('ember-field-mixin'), {
     template: require('../templates/text-area'),
     
-    classNameBindings: [':text-field', ':text-area', 'value:has-value', 'hasFocus:focus', 'grow', 'disabled', 'required', 'flexClass'],
+    classNameBindings: [':text-field', ':text-area', 'value:has-value', 'hasFocus:focus', 'grow', 'disabled', 'required', 'flexClass', 'block'],
 
     init: function() {
         this._super();
@@ -54,6 +54,8 @@ module.exports = Em.Component.extend(require('ember-field-mixin'), {
         var flex = this.get('flex');
         return flex ? 'flex-'+flex : null;
     }.property('flex'),
+
+    block: false,
 
     valueDidChange: function() {
         this.updateMirror();
