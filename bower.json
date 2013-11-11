@@ -1,6 +1,6 @@
 {
   "name": "ember-text-area",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/billysbilling/ember-text-area",
   "main": "src/js/text-area.js",
   "billy-builder": {
