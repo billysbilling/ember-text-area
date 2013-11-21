@@ -1,4 +1,4 @@
-var i18n = require('i18n');
+var i18nContext = require('i18n-context');
 
 module.exports = Em.Component.extend(require('ember-field-mixin'), {
     template: require('../templates/text-area'),
@@ -39,7 +39,7 @@ module.exports = Em.Component.extend(require('ember-field-mixin'), {
     },
     
     value: "",
-    placeholder: i18n.tProperty('placeholder'),
+    placeholder: i18nContext.tProperty('placeholder'),
     
     disabled: false,
     
