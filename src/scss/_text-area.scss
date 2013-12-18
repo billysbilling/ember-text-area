@@ -39,16 +39,10 @@
             }
         }
 
-        &.required:not(.disabled):not(.has-value):not(.has-error) {
-            textarea:not(:focus) {
-                background-color: $background-gray;
-            }
-        }
-
         &.has-error {
             textarea {
-                background-color: $yellow-xlight;
-                border-color: $yellow-light;
+                background-color: transparentize($red, 0.9);
+                border-color: $red;
             }
         }
 
