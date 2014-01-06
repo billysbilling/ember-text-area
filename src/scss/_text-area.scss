@@ -29,6 +29,8 @@
                 top: 0px;
                 left: 0px;
                 height: 100%;
+                //Hides scrollbar on IE
+                overflow: hidden;
             }
             .mirror {
                 z-index: 1;
