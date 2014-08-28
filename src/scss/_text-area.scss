@@ -11,17 +11,17 @@
         padding: $small-field-padding-top $small-field-padding-right $small-field-padding-bottom $small-field-padding-left;
         font-size: $small-field-font-size;
     }
-    
+
     .text-area {
         position: relative;
         display: inline-block;
-    
+
         textarea {
             width: 100%;
             display: block;
             resize: none;
         }
-    
+
         &.grow {
             textarea {
                 z-index: 2;
@@ -35,7 +35,7 @@
             .mirror {
                 z-index: 1;
                 position: relative;
-                @include opacity(0);
+                opacity: 0;
                 display: block;
                 white-space: pre-wrap !important;
             }
