@@ -1,7 +1,7 @@
 var i18nContext = require('i18n-context');
 
 module.exports = Em.Component.extend(require('ember-field-mixin'), {
-    template: require('../templates/text-area'),
+    layout: require('../templates/text-area'),
     
     classNameBindings: [':text-field', ':text-area', 'value:has-value', 'hasFocus:focus', 'grow', 'disabled', 'required', 'flexClass', 'block'],
 
